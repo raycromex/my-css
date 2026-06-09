@@ -1,0 +1,58 @@
+/* === DR REEL MODERN (Ringkas & Kuat) === */
+
+/* Button Navy Blue */
+button, input[type="submit"] {
+  background: #13233a !important;
+  color: #fff !important;
+  border: 2px solid #13233a !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .5px !important;
+  transition: all .25s ease !important;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #0f1c30 !important;
+  border-color: #0f1c30 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Product Card Modern */
+[class*="product-card"], [class*="card"] {
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08) !important;
+  transition: all .3s ease !important;
+  overflow: hidden !important;
+}
+
+[class*="product-card"]:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,.12) !important;
+}
+
+/* Image Hover */
+img { transition: transform .4s ease !important; }
+[class*="product-card"]:hover img { transform: scale(1.03) !important; }
+
+/* Grid & Spacing */
+.product-grid, .collection-grid { gap: 24px !important; }
+[class*="section"] { padding: 50px 20px !important; }
+
+/* Typography */
+.product-info h3, .price { 
+  font-weight: 700 !important; 
+  color: #111 !important; 
+  letter-spacing: -.02em !important;
+}
+
+/* Variant Button */
+.box-radio-option label, .variant-picker button {
+  border-radius: 999px !important;
+}
+.box-radio-option label.active,
+.box-radio-option label.selected {
+  background: #13233a !important;
+  color: #fff !important;
+  border-color: #13233a !important;
+}
