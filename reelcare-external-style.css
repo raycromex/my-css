@@ -1,0 +1,369 @@
+/*
+Art direction: ReelCare premium-clean storefront
+Palette: warm beige surfaces + deep navy action color
+Typography: system sans stack for maximum compatibility
+Density: balanced, airy product-card layout
+
+Notes:
+- Scoped to ReelCare classes from the provided HTML so it is safer than broad global overrides.
+- Includes a small optional generic fallback block for common storefront elements.
+- Best loaded AFTER the platform/theme default CSS.
+*/
+
+:root {
+  --rc-bg: #F2F1EC;
+  --rc-surface: #FFFFFF;
+  --rc-surface-2: #F7F4EE;
+  --rc-text: #111111;
+  --rc-muted: #666666;
+  --rc-faint: #8D8D8D;
+  --rc-line: rgba(0,0,0,.08);
+  --rc-line-strong: rgba(0,0,0,.14);
+  --rc-primary: #13233A;
+  --rc-primary-hover: #1D3557;
+  --rc-primary-soft: #F4F7FB;
+  --rc-shadow-sm: 0 8px 22px rgba(0,0,0,.06);
+  --rc-shadow-md: 0 16px 28px rgba(0,0,0,.10);
+  --rc-shadow-card: 0 10px 24px rgba(0,0,0,.04);
+  --rc-radius-sm: 12px;
+  --rc-radius-md: 16px;
+  --rc-radius-lg: 20px;
+  --rc-radius-xl: 28px;
+  --rc-pill: 999px;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--rc-bg) !important;
+  color: var(--rc-text) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  letter-spacing: -.01em !important;
+}
+
+a {
+  color: inherit;
+}
+
+/* ReelCare scope */
+.reelcare-wrap {
+  background: var(--rc-bg) !important;
+  color: var(--rc-text) !important;
+}
+
+.reelcare-wrap,
+.reelcare-wrap * {
+  box-sizing: border-box;
+}
+
+.reelcare-wrap h1,
+.reelcare-wrap h2,
+.reelcare-wrap h3 {
+  color: var(--rc-text) !important;
+  font-weight: 700 !important;
+  letter-spacing: -.03em !important;
+  line-height: 1.12 !important;
+}
+
+.reelcare-wrap p,
+.reelcare-wrap li,
+.reelcare-wrap .reelcare-mini,
+.reelcare-wrap .reelcare-badge {
+  color: var(--rc-muted) !important;
+}
+
+.reelcare-hero {
+  padding-top: 44px !important;
+  padding-bottom: 56px !important;
+}
+
+.reelcare-badge {
+  background: rgba(255,255,255,.78) !important;
+  border: 1px solid var(--rc-line) !important;
+  border-radius: var(--rc-pill) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.reelcare-card,
+.reelcare-final,
+.reelcare-faq details {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F3F0EA 100%) !important;
+  border: 1px solid var(--rc-line) !important;
+  box-shadow: var(--rc-shadow-card) !important;
+  color: var(--rc-text) !important;
+}
+
+.reelcare-card {
+  border-radius: var(--rc-radius-lg) !important;
+}
+
+.reelcare-final {
+  border-radius: var(--rc-radius-xl) !important;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4F1EA 100%) !important;
+}
+
+.reelcare-faq details {
+  border-radius: var(--rc-radius-md) !important;
+}
+
+.reelcare-faq summary {
+  color: var(--rc-text) !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+
+.reelcare-btn,
+.reelcare-wrap button,
+.reelcare-wrap input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--rc-primary) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid var(--rc-primary) !important;
+  border-radius: var(--rc-pill) !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  padding: 12px 20px !important;
+  box-shadow: none !important;
+  transition: transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease !important;
+  text-decoration: none !important;
+}
+
+.reelcare-btn:hover,
+.reelcare-wrap button:hover,
+.reelcare-wrap input[type="submit"]:hover {
+  background: var(--rc-primary-hover) !important;
+  border-color: var(--rc-primary-hover) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+
+.reelcare-btn-secondary {
+  background: #FFFFFF !important;
+  color: var(--rc-text) !important;
+  border-color: var(--rc-line-strong) !important;
+}
+
+.reelcare-btn-secondary:hover {
+  background: var(--rc-primary-soft) !important;
+  color: var(--rc-primary) !important;
+  border-color: var(--rc-primary) !important;
+}
+
+.reelcare-pill {
+  display: inline-block;
+  background: #FFFFFF !important;
+  color: var(--rc-faint) !important;
+  border: 1px solid var(--rc-line) !important;
+  border-radius: var(--rc-pill) !important;
+  text-transform: uppercase !important;
+  letter-spacing: .16em !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 6px 10px !important;
+}
+
+.reelcare-price {
+  color: var(--rc-text) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.03em !important;
+}
+
+.reelcare-stars {
+  color: #C89211 !important;
+}
+
+.reelcare-product-img {
+  height: 220px;
+  border-radius: 18px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0,0,0,.05) !important;
+  box-shadow: var(--rc-shadow-sm) !important;
+  padding: 6px !important;
+  transition: transform .25s ease, box-shadow .25s ease !important;
+}
+
+.reelcare-product-card:hover .reelcare-product-img,
+.reelcare-product-card:hover img {
+  transform: translateY(-4px);
+  box-shadow: var(--rc-shadow-md) !important;
+}
+
+.reelcare-wrap img:not(.custom-logo):not(.site-logo):not(.header-logo) {
+  background: #FFFFFF !important;
+  padding: 6px !important;
+  border-radius: var(--rc-radius-md) !important;
+  border: 1px solid rgba(0,0,0,.05) !important;
+  box-shadow: var(--rc-shadow-sm) !important;
+  transition: transform .25s ease, box-shadow .25s ease !important;
+}
+
+.reelcare-section {
+  padding-top: 56px !important;
+  padding-bottom: 56px !important;
+}
+
+.reelcare-products,
+.reelcare-trust,
+.reelcare-two-col {
+  gap: 20px !important;
+}
+
+.reelcare-wrap hr {
+  border-color: rgba(0,0,0,.07) !important;
+}
+
+/* Optional fallback block for common storefront pieces */
+header,
+.header,
+.site-header,
+nav,
+.navbar {
+  background: rgba(242,241,236,.92) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(0,0,0,.05) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,.03) !important;
+}
+
+.header img,
+.navbar img,
+.logo img,
+.site-header img,
+.header__logo img {
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+#product-options,
+.box-radio-option,
+#variants_options {
+  background: linear-gradient(180deg,#FFFFFF 0%,#F3F0EA 100%) !important;
+  border: 1px solid rgba(0,0,0,.06) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.04) !important;
+}
+
+.product-form__input button,
+.product-form button:not([type="submit"]),
+.variant-picker button,
+.swatch-button,
+.option-button,
+.box-radio-option label {
+  background: #FFFFFF !important;
+  color: var(--rc-text) !important;
+  border: 1.5px solid rgba(0,0,0,.14) !important;
+  border-radius: var(--rc-pill) !important;
+  padding: 8px 16px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: .07em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04) !important;
+  height: auto !important;
+}
+
+.product-form__input button:hover,
+.variant-picker button:hover,
+.swatch-button:hover,
+.option-button:hover,
+.box-radio-option label:hover {
+  border-color: var(--rc-primary) !important;
+  background: var(--rc-primary-soft) !important;
+  color: var(--rc-primary) !important;
+}
+
+.box-radio-option input[type="radio"]:checked + label,
+.box-radio-option label.active,
+.box-radio-option label.selected,
+.product-form__input button.active,
+.product-form__input button.selected,
+.product-form__input button[aria-pressed="true"],
+.variant-picker button.active,
+.swatch-button.active,
+.option-button.active {
+  background: var(--rc-primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--rc-primary) !important;
+  box-shadow: 0 6px 16px rgba(19,35,58,.18) !important;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  border: 1.5px solid rgba(0,0,0,.10) !important;
+  border-radius: 12px !important;
+  background: #FFFFFF !important;
+  color: var(--rc-text) !important;
+  padding: 10px 14px !important;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  border-color: var(--rc-primary) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(19,35,58,.12) !important;
+}
+
+footer,
+.footer,
+.site-footer {
+  background: linear-gradient(180deg, #222C3A 0%, #1C2430 100%) !important;
+  color: #EEF2F7 !important;
+  border-top: 1px solid rgba(255,255,255,.05) !important;
+}
+
+footer a,
+.footer a,
+.site-footer a {
+  color: rgba(238,242,247,.72) !important;
+}
+
+footer a:hover,
+.footer a:hover,
+.site-footer a:hover {
+  color: #FFFFFF !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #ECE9E2 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B7B1A7 !important;
+  border-radius: 999px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8C857B !important;
+}
+
+@media (max-width: 900px) {
+  .reelcare-hero {
+    padding-bottom: 44px !important;
+  }
+
+  .reelcare-section {
+    padding-top: 44px !important;
+    padding-bottom: 44px !important;
+  }
+}
