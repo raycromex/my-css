@@ -1,129 +1,96 @@
-/* ========== ORIGINAL CSS KAU + MODERN UPGRADE ========== */
+/* ========== FULL CSS + NAVY BLUE THEME ========== */
 
-/* Base */
 *{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif!important}
-body{background:#F2F1EC!important;color:#111!important;-webkit-font-smoothing:antialiased!important;letter-spacing:-.01em!important}
-a{text-decoration:none!important;color:inherit!important}
+
+/* Background & Text */
+body{background:#F8F7F2!important;color:#111!important}
 
 /* Header */
-header,.header,.site-header,nav,.navbar{background:rgba(242,241,236,.92)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important;border-bottom:1px solid rgba(0,0,0,.05)!important;box-shadow:0 2px 12px rgba(0,0,0,.03)!important}
-.header img,.navbar img,.logo img,.site-header img,.header__logo img{background:transparent!important;padding:0!important;border:none!important;box-shadow:none!important;transform:none!important}
+header,.header,.site-header{background:rgba(248,247,242,.95)!important;backdrop-filter:blur(12px)!important;border-bottom:1px solid rgba(0,0,0,.06)!important}
 
-/* Image */
-img{background:#fff!important;padding:6px!important;border-radius:16px!important;border:1px solid rgba(0,0,0,.05)!important;box-shadow:0 8px 22px rgba(0,0,0,.06)!important;transition:transform .25s ease,box-shadow .25s ease!important}
-a:hover img{transform:translateY(-4px)!important;box-shadow:0 16px 28px rgba(0,0,0,.1)!important}
-
-/* Typography */
-h1,h2,h3,h4,h5,h6,.product-info a,.product-info h2,.product-info h3,.price,[class*=price]{color:#111!important;font-weight:700!important;letter-spacing:-.03em!important;line-height:1.15!important}
-p,span,small,label{color:#666!important;line-height:1.55!important}
-small,[class*=vendor],[class*=brand]{font-size:10px!important;font-weight:700!important;letter-spacing:.16em!important;text-transform:uppercase!important;color:#8d8d8d!important}
-.row .col-6.col-md-4 .product-info a{font-size:15px!important;font-weight:700!important;letter-spacing:-.025em!important;line-height:1.28!important}
-
-/* Button Base */
-button,input[type=submit]{background:#13233a!important;color:#fff!important;border:1.5px solid #13233a!important;border-radius:999px!important;font-weight:700!important;letter-spacing:.08em!important;text-transform:uppercase!important;font-size:12px!important;padding:12px 20px!important;box-shadow:none!important;transition:.22s!important;cursor:pointer!important}
-button:hover,input[type=submit]:hover{background:#1d3557!important;color:#fff!important;border-color:#1d3557!important}
-
-/* Product Options */
-#product-options,.box-radio-option,#variants_options{background:linear-gradient(180deg,#fff 0%,#f3f0ea 100%)!important;border:1px solid rgba(0,0,0,.06)!important;border-radius:18px!important;box-shadow:0 10px 24px rgba(0,0,0,.04)!important}
-.product-form__input button,.product-form button:not([type=submit]),.variant-picker button,.swatch-button,.option-button,.box-radio-option label{background:#fff!important;color:#111!important;border:1.5px solid rgba(0,0,0,.14)!important;border-radius:999px!important;padding:8px 16px!important;font-size:11px!important;font-weight:600!important;letter-spacing:.07em!important;text-transform:uppercase!important;box-shadow:0 2px 6px rgba(0,0,0,.04)!important;height:auto!important;transition:.2s!important}
-.product-form__input button:hover,.variant-picker button:hover,.swatch-button:hover,.option-button:hover,.box-radio-option label:hover{border-color:#13233a!important;background:#f4f7fb!important;color:#13233a!important}
-.box-radio-option input[type=radio]:checked+label,.box-radio-option label.active,.box-radio-option label.selected,.product-form__input button.active,.product-form__input button.selected,.product-form__input button[aria-pressed=true],.variant-picker button.active,.swatch-button.active,.option-button.active{background:#13233a!important;color:#fff!important;border-color:#13233a!important;box-shadow:0 6px 16px rgba(19,35,58,.18)!important}
-select,input[type=text],input[type=email],input[type=number],textarea{border:1.5px solid rgba(0,0,0,.1)!important;border-radius:12px!important;background:#fff!important;color:#111!important;padding:10px 14px!important}
-select:focus,input:focus,textarea:focus{border-color:#13233a!important;outline:none!important;box-shadow:0 0 0 3px rgba(19,35,58,.12)!important}
-
-/* Grid & Card */
-.product-grid,.collection-grid,[class*=grid]{gap:20px!important}
-[class*=product-card],[class*=card]{border-radius:20px!important;overflow:hidden!important}
-
-/* Section */
-[class*=section],[class*=collection]{padding:40px 20px!important}
-
-/* Footer */
-footer,.footer,.site-footer{background:linear-gradient(180deg,#222c3a 0%,#1c2430 100%)!important;color:#EEF2F7!important;border-top:1px solid rgba(255,255,255,.05)!important}
-footer a,.footer a,.site-footer a{color:rgba(238,242,247,.72)!important}
-footer a:hover,.footer a:hover,.site-footer a:hover{color:#fff!important}
-hr,[class*=divider],[class*=separator]{border-color:rgba(0,0,0,.07)!important}
-
-/* Scrollbar */
-::-webkit-scrollbar{width:6px!important}
-::-webkit-scrollbar-track{background:#ece9e2!important}
-::-webkit-scrollbar-thumb{background:#b7b1a7!important;border-radius:999px!important}
-::-webkit-scrollbar-thumb:hover{background:#8c857b!important}
-
-/* Hide old price if needed */
-.row .col-6.col-md-4 .product-info .price{display:none!important}
-
-/* ========== MODERN UPGRADE (TAMBAHAN) ========== */
-
-/* Product Card Lebih Premium */
+/* Product Card - Lebih Premium */
 [class*="product-card"],
 [class*="card"] {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  background:#fff!important;
+  border:1px solid rgba(0,0,0,.08)!important;
+  border-radius:20px!important;
+  box-shadow:0 10px 30px rgba(0,0,0,.07)!important;
+  transition:all .3s ease!important;
+  overflow:hidden!important;
 }
 
-[class*="product-card"]:hover,
-[class*="card"]:hover {
-  transform: translateY(-6px) !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+[class*="product-card"]:hover {
+  transform:translateY(-8px)!important;
+  box-shadow:0 20px 40px rgba(0,0,0,.12)!important;
 }
 
-/* Image Hover */
-img {
-  transition: transform 0.4s ease !important;
-}
-[class*="product-card"]:hover img {
-  transform: scale(1.03) !important;
-}
-
-/* Button Lebih Moden */
+/* Button - Navy Blue Kuat */
 button,
-input[type="submit"] {
-  box-shadow: 0 4px 12px rgba(19, 35, 58, 0.2) !important;
-  padding: 13px 24px !important;
+input[type="submit"],
+a.button,
+.btn {
+  background:#13233a!important;
+  color:#fff!important;
+  border:2px solid #13233a!important;
+  border-radius:999px!important;
+  font-weight:700!important;
+  text-transform:uppercase!important;
+  letter-spacing:0.5px!important;
+  transition:all .25s ease!important;
+  box-shadow:0 4px 15px rgba(19,35,58,.25)!important;
 }
+
 button:hover,
 input[type="submit"]:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(19, 35, 58, 0.3) !important;
+  background:#0f1c30!important;
+  border-color:#0f1c30!important;
+  transform:translateY(-2px)!important;
 }
 
-/* Grid Lebih Lapang */
+/* Product Title & Price */
+.product-info h3,
+.product-info a,
+.price {
+  color:#111!important;
+  font-weight:700!important;
+}
+
+/* Variant / Option Button */
+.box-radio-option label,
+.variant-picker button {
+  border:1.5px solid #ddd!important;
+  border-radius:999px!important;
+}
+
+.box-radio-option label.active,
+.box-radio-option label.selected,
+.variant-picker button.active {
+  background:#13233a!important;
+  color:#fff!important;
+  border-color:#13233a!important;
+}
+
+/* Grid & Spacing */
 .product-grid,
-.collection-grid,
-[class*="grid"] {
-  gap: 24px !important;
+.collection-grid {
+  gap:24px!important;
 }
 
-/* Section Padding Lebih Baik */
-[class*="section"],
-[class*="collection"] {
-  padding: 60px 20px !important;
+/* Section */
+[class*="section"] {
+  padding:50px 20px!important;
 }
 
-/* Header Lebih Clean */
-header,
-.header,
-.site-header {
-  backdrop-filter: blur(16px) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
-}
-
-/* Typography Lebih Tight */
-h1, h2, h3 {
-  letter-spacing: -0.035em !important;
+/* Navy Blue Accent (kalau ada elemen tertentu) */
+.reelcare-btn-primary,
+.btn-primary {
+  background:#13233a!important;
+  color:#fff!important;
 }
 
 /* Mobile */
-@media (max-width: 768px) {
-  [class*="product-card"],
-  [class*="card"] {
-    border-radius: 16px !important;
-  }
-  button,
-  input[type="submit"] {
-    padding: 12px 20px !important;
-    font-size: 11px !important;
+@media (max-width:768px) {
+  [class*="product-card"] {
+    border-radius:16px!important;
   }
 }
